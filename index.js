@@ -45,4 +45,8 @@ app.post("/newmessage",(req,res)=>{
     res.redirect("/");
 })
 
-app.listen(8000,()=>{console.log("Server started at 8000")});
+const port = process.env.PORT || 8000;
+
+app.listen(port, "0.0.0.0", () => {
+  console.log(`Server started on port ${port}`);
+});
