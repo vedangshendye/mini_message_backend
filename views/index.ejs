@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message App-Home</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    
+    <div class="page-wrapper">
+        <h1 class="messages-title">Welcome to the messaging app.! </h1>
+            <div class="message-container">
+                <%for(let i=0;i<messages.length;i++){%>
+                <div class="message-box">
+                    <div class="message-header">
+                        <span class="msg-user"><%= messages[i].user %></span>
+                        <span class="msg-time"><%= messages[i].added %></span>
+                    </div>
+                    <p class="msg-text"><%= messages[i].text %></p>
+                <button onclick="myfunc(<%= i %>)" class="msg-details-btn">See details</button>
+                </div>
+            <%}%>
+            </div>
+    
+        <button id="mybtn" class="msg-add-btn">Add a message:</button>
+    </div>
+    <script>
+        let mybtn=document.getElementById("mybtn");
+        mybtn.addEventListener('click',()=>{window.location.href="http://localhost:8000/newmessage"});
+        
+        function myfunc(ind)
+        {
+            window.location.href = "/details/" + ind;
+        }
+    </script>
+</body>
+</html>

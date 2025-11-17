@@ -1,0 +1,197 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #1d1f23;  /* Dark theme background */
+    color: white;
+}
+
+
+
+/* ==========================================================
+   =================== MESSAGE PAGE =========================
+   ========================================================== */
+
+
+
+/* Page wrapper */
+.page-wrapper {
+    min-height: 100vh;
+    padding: 40px 0;
+}
+
+/* Page Title */
+.messages-title {
+    text-align: center;
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+
+/* MAIN CONTAINER FOR ALL MESSAGES */
+.messages-container {
+    width: 50%;                 /* Makes messages more focused */
+    margin-left: 25%;           /* Skip left 25% of the page */
+    background-color: #2b2e33;  /* Slight contrast from page bg */
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
+}
+
+
+/* INDIVIDUAL MESSAGE BOX */
+.msg-box {
+    background: linear-gradient(145deg, #3e4248, #2f3237);
+    border: 1px solid #4a4d52;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* Hover effect for message cards */
+.msg-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.45);
+}
+
+
+/* MESSAGE HEADER (Name + Time) */
+.msg-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.msg-user {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.msg-time {
+    font-size: 0.9rem;
+    color: #cfcfcf;
+}
+
+
+/* MESSAGE TEXT */
+.msg-text {
+    margin: 12px 0 16px;
+    font-size: 1.05rem;
+    color: #e0e0e0;
+    line-height: 1.5;
+}
+
+
+/* DETAILS BUTTON */
+.msg-details-btn {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    background-color: #5a7bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.msg-details-btn:hover {
+    background-color: #4461d6;
+}
+
+
+/* ADD MESSAGE MAIN BUTTON */
+.msg-add-btn {
+    display: block;
+    margin: 40px auto 0;
+    padding: 12px 22px;
+    font-size: 1rem;
+    background-color: #4a6cf7;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.msg-add-btn:hover {
+    background-color: #3652d3;
+}
+
+
+
+
+/* ==========================================================
+   ================== NEW MESSAGE FORM =======================
+   ========================================================== */
+
+
+
+.form-container {
+    width: 80%;
+    max-width: 450px;
+    margin: 60px auto;
+    background: #2b2e33;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.35);
+    color: white;
+}
+
+.message-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-title {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+
+/* Inputs */
+.form-input {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    border: 1px solid #555;
+    background-color: #1f2024;
+    color: white;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border 0.2s ease-in-out;
+}
+
+.form-input::placeholder {
+    color: #9d9d9d;
+}
+
+.form-input:focus {
+    border-color: #4a6cf7;
+    outline: none;
+}
+
+
+/* Submit Button */
+.form-submit-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    background-color: #4a6cf7;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.form-submit-btn:hover {
+    background-color: #3652d3;
+}
